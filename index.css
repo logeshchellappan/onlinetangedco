@@ -46,6 +46,9 @@ body {
    text-decoration: underline;
    color: white;
 }
+.link:hover{
+   color: white;
+}
 
 header {
       display: flex;
@@ -151,6 +154,14 @@ header {
     }
 
 /* Slideshow container */
+
+.slideshow{
+      max-width:100%;
+    text-align: center;
+    margin:50px auto 30px auto;
+}
+
+
 .slideshow-container {
   max-width: 100%;
   position: relative;
@@ -200,10 +211,12 @@ header {
 .caption-text3{
   background-color: #0a57ff;
   color: white;
-  padding: 7px 9px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: bold;
 } 
 a.caption-text3:hover{
     background-color: #0041F5;
@@ -227,21 +240,15 @@ a.caption-text3:hover{
 
 /* Fading animation */
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
 }
 
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
+
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width:960px) {
@@ -254,10 +261,14 @@ a.caption-text3:hover{
   transform: translate(-70%, -50%);
   width:60%;
 }
+.dot {
+  height: 10px;
+  width: 10px;margin: 0 1px;
+}
 }
 @media (min-width: 300px) and (max-width: 690px) {
-.caption-text{font-size: 20px;}
-.caption-text1{font-size: 15px; margin:5px 0px;}
+.caption-text{font-size: 18px;}
+.caption-text1{font-size: 13px; margin:5px 0px;}
 .caption-text3{font-size: 10px; margin:5px 0px;} 
 .text {
   top: 50%;
@@ -265,16 +276,18 @@ a.caption-text3:hover{
   transform: translate(-70%, -50%);
   width:70%;
 }
+.dot {
+  height: 10px;
+  width: 10px;margin: 0 1px;
 }
-
+}
 
 /* About us css */
 .aboutus{
     max-width:100%;
     text-align: center;
-    margin:100px 0px;
+    margin:30px 0px 50px 0px;
 }
-
 .aboutustext{
     color:#0a57ff;
     margin-bottom:2px;
@@ -301,33 +314,36 @@ a.caption-text3:hover{
     letter-spacing: 2px;
 }
 .card{
-    border-radius: 20px;
+    border-radius: 20px; 
+    padding: 70px 8px;
+    height:300px;
+    align-items: center;
 }
-
 .card:hover{
     border-radius: 20px;
     scale: 1.05;
     transition: all 0.4s ease;
     cursor: pointer;
-    
 }
 .card-text{
     color:rgb(255, 255, 255);
     font-weight: bold;
     font-size: 23px;
-    padding: 25px 18px;
     text-align:left;
 }
+
 @media (min-width: 300px) and (max-width: 768px) {
-  .aboutustext2{
-    font-size: 16px;line-height: 1.6;
+.aboutustext2{
+    font-size: 16px;
+    line-height: 1.6;
 } 
 .row{
    display: block;
+   margin: 0 -5px;
 }
 .col-sm-3{
   width:100%;
-  margin:20px;
+  margin:15px 5px;
 }
 }
 
@@ -729,6 +745,77 @@ a.caption-text3:hover{
     border-radius: 4px;
 }
 
+@media (min-width: 300px) and (max-width: 768px) {
+.programtext1{
+    font-size: 10px;
+}
+.programtext2{
+    font-size: 30px;
+}
+.programtext3{
+    font-size: 15px;
+} 
+.programgridtext{
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+}
+.programgridtext1{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.programgridtext2{
+    -webkit-line-clamp:none;
+    margin: 15px;
+}
+.programgridtext3{
+    font-size: 15px;
+}
+
+.programgridtext4{
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+}
+.programgridtext5{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.programgridtext6{
+    -webkit-line-clamp:none;
+    margin: 15px;
+}
+
+.programgridtext7{
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+}
+.programgridtext8{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.programgridtext9{
+    -webkit-line-clamp:none;
+    margin: 15px;
+}
+
+.programgridtext10{
+    font-size: 10px;
+    padding: 3px;
+    margin-left: 5px;
+}
+.programgridtext11{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.programgridtext12{
+    -webkit-line-clamp:none;
+    margin: 15px;
+}
+}
+
+
 /* Our Expert Mentors */
 
 .mentor{
@@ -741,7 +828,7 @@ a.caption-text3:hover{
 }
 .mentortext{
     color:rgb(156, 163, 175);
-    margin:100px 0px;
+    margin:50px auto;
     font-weight: 600; 
     font-size: 22px;
     text-align: center;
@@ -795,17 +882,30 @@ a.caption-text3:hover{
     justify-content: center;
     gap: 10px;
 }
+.relative1{
+position:relative;
+margin:50px auto;
+}
 @media (min-width: 300px) and (max-width: 768px){
+
 .row{
    display: block;
+   margin: 0 -5px;
 }
 .col-sm-4{
   width:100%;
-  margin:20px;
+  margin:10px;
+}
+.row{
+   display: block;
+   margin: 0 -5px;
 }
 .col-sm-8{
   width:100%;
-  margin:20px;
+  margin:10px;
+}
+.relative1{
+margin:auto;
 }
 }
 
@@ -821,7 +921,7 @@ a.caption-text3:hover{
 .locationgrid1{
     background-color: white;
     box-shadow:0 10px 15px -3px;
-    padding: 80px 40px;
+    padding: 25px;
     border-radius: 25px;
     height:650px;
     margin-top: 50px;
@@ -839,7 +939,7 @@ a.caption-text3:hover{
     background-color: #bfdbfe;
     display: flex;
     align-items: center;
-    justify-content: center;margin-right: 20px; 
+    justify-content: center;margin-right: 10px; 
 }
 .locationgrid2{
     width:40px;
@@ -848,7 +948,7 @@ a.caption-text3:hover{
     background-color: #dbeafe;
     display: flex;
     align-items: center;
-    justify-content: center;margin-right: 20px; 
+    justify-content: center;margin-right: 10px; 
 }
 .locationgrid2:hover{
     background-color: #bfdbfe;
@@ -862,7 +962,9 @@ a.caption-text3:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px; text-decoration: none;
+    margin-top: 28px;
+    margin-left: 10px;
+    text-decoration: none;
 }
 .locationgrida:hover {
     background-color: #eff6ff;
@@ -891,9 +993,6 @@ a.caption-text3:hover{
 }
 .col-sm-6{
   width:100%;
-}
-.locationgrid1{
-  margin:20px;
 }
 }
 
@@ -981,6 +1080,11 @@ a.caption-text3:hover{
     max-width: 100%;
     margin: 30px;
 } 
+
+.buttonready{
+  font-size: 15px;display: block;  padding: 12px;
+
+}
 }
 
 /* footer */
@@ -999,7 +1103,7 @@ a.caption-text3:hover{
     }
 
     .footer-logo {
-      width: 120px;
+      width: 100px;
       margin-bottom: 10px;
     }
 
@@ -1081,6 +1185,12 @@ a.caption-text3:hover{
     }
       .footer-bottomflex{
       flex-direction: column;
+    }
+ .footer-bottom b {
+      font-size: 15px;
+    }    
+    .footer-bottom span {
+      font-size: 14px;
     }
     }
 

@@ -30,25 +30,12 @@ function showSlides() {
     
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 8 seconds
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
 function closePopup(id) {
   document.getElementById(id).style.display = "none";
 }
-
-function openReplyPopup() {
-  document.getElementById("popup1").style.display = "none";
-  document.getElementById("popup2").style.display = "flex";
-}
-
-
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav');
-
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
 
 const openButtons = document.querySelectorAll('.openPopup');
 const closeBtn = document.getElementById('closePopup');
