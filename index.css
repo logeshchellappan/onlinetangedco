@@ -1327,8 +1327,12 @@ margin:auto;
 
 .b1{
   background-color:#2563eb ;
-  color: #ffffff;
+  color: #ffffff;font-weight: bold;
  }
+
+ .b1:hover{
+   color: rgb(0, 0, 0);
+}
   @media (min-width: 300px) and (max-width: 768px) {
       .ready2 {
        font-size: medium;padding: 30px;text-align: center;
